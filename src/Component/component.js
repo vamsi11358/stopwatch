@@ -34,9 +34,9 @@ export default function StopWatch() {
 
   return (
     <>
-      <h1>StopWatch</h1>
+      <h1>Stopwatch</h1>
       <div>
-        {time.min.toString().padStart(2, '0')}:
+        Time:{time.min.toString().padStart(2, '0')}:
         {time.sec.toString().padStart(2, '0')}
       </div>
       <button onClick={handleStartStop}>
