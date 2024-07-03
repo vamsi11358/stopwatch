@@ -36,12 +36,17 @@ export default function StopWatch() {
     <>
       <h1>Stopwatch</h1>
       <div>
-        Time:{time.min.toString().padStart(2, '0')}:
+        Time:  {time.min.toString()}:
         {time.sec.toString().padStart(2, '0')}
       </div>
+      {isActive &&(
       <button onClick={handleStartStop}>
-        {isActive ? "Stop" : "Start"}
+        Stop
       </button>
+       )}
+      {!isActive&&(
+       <button onClick={handleStartStop}>Start</button>
+      )}
       <button onClick={handleReset}>Reset</button>
     </>
   );
